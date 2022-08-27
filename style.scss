@@ -1,3 +1,6 @@
+html{
+  background: gray
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -6,36 +9,37 @@
   color: #2c3e50;
   margin-top: 60px;
   user-select: none;
-}
-
-#app>div {
-  position: absolute;
-}
-
-.title-bar-controls button[aria-label="Minimize"] {
-  background-image: url(Minimize.svg);
-}
-
-.title-bar-controls button[aria-label="Maximize"] {
-  background-image: url(Maximize.svg);
-}
-
-.title-bar-controls button[aria-label="Close"] {
-  background-image: url(Close.svg);
+  
+  .title-bar-controls button[aria-label="Minimize"] {
+    background-image: url(Minimize.svg);
+  }
+  
+  .title-bar-controls button[aria-label="Maximize"] {
+    background-image: url(Maximize.svg);
+  }
+  
+  .title-bar-controls button[aria-label="Close"] {
+    background-image: url(Close.svg);
+  }
 }
 
 $white: rgba(255,255,255,0.3);
 
-#prompt {
-  position: absolute;
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
+body {
+  background: linear-gradient(45deg, #FC466B, #3F5EFB);
+  font-family: 'Montserrat', sans-serif;
+}
 
+#prompt {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+  
   form {
     background: $white;
     padding: 3em;
-    height: 220px;
+    height: 320px;
     border-radius: 20px;
     border-left: 1px solid $white;
     border-top: 1px solid $white;
@@ -49,7 +53,7 @@ $white: rgba(255,255,255,0.3);
       font-weight: 500;
       color: #fff;
       opacity: 0.7;
-      font-size: 1.4rem;
+      font-size: 2.4em;
       margin-top: 0;
       margin-bottom: 60px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
@@ -58,7 +62,7 @@ $white: rgba(255,255,255,0.3);
     a {
       text-decoration: none;
       color: #ddd;
-      font-size: 12px;
+      font-size: 2em;
       
       &:hover {
         text-shadow: 2px 2px 6px #00000040;
@@ -68,10 +72,17 @@ $white: rgba(255,255,255,0.3);
         text-shadow: none;
       }
     }
-    
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
     input {
       background: transparent;
       width: 200px;
+      height: auto;
       padding: 1em;
       margin-bottom: 2em;
       border: none;
@@ -170,8 +181,8 @@ $white: rgba(255,255,255,0.3);
     &-5 {
       height: 60px;
       width: 60px;
-      bottom: 95px;
-      left: -25px;
+      bottom: 170px;
+      left: 90px;
       z-index: -1;
     }
   }
@@ -183,9 +194,4 @@ $white: rgba(255,255,255,0.3);
   button:focus {
       outline: none;
   }
-  
-  
-  
-
 }
-

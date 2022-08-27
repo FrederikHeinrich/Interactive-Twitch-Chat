@@ -6,7 +6,11 @@ const urlParams = new URLSearchParams(window.location.search);
 document.querySelector('#stream').value = localStorage.getItem("stream");
 if(urlParams.get("stream") != null) localStorage.setItem('stream', urlParams.get("stream"));
 
-if(urlParams.get("stream") != null || urlParams.get("stream") != null){
+document.querySelector('#maxmessages').value = localStorage.getItem("maxmessages");
+if(urlParams.get("maxmessages") != null) localStorage.setItem('maxmessages', urlParams.get("maxmessages"));
+
+
+if(urlParams.get("stream") != null && urlParams.get("stream") != "" && urlParams.get("maxmessages") != null){
   document.querySelector('#prompt').remove();
 }
 
@@ -22,10 +26,20 @@ client.connect();
 
 var gz = 0;
 
+client.on("clearchat", (channel) => {
+  app.innerHTML =""
+});
+
+client.on("messagedeleted", (channel, username, deletedMessage, userstate) => {
+  document.getElementById(`message=${userstate['target-msg-id']}`).remove();
+});
+
 client.on('message', (channel, tags, message, self) => {
+  console.log(tags)
   console.log(`${tags['display-name']}: ${message}`);
   
   var messageBlock = document.createElement('div');
+  messageBlock.id = `message=${tags['id']}`
 /*  messageBlock.innerHTML = `
   <div class = "title-bar" >
     <div class = "title-bar-text" >
@@ -127,7 +141,7 @@ client.on('message', (channel, tags, message, self) => {
     gz= gz + 1;
   }
   gz = gz + 1;
-  if (app.children.length > 1000) {
+  if (app.children.length > urlParams.get("maxmessages")) {
     app.children[0].remove();
   }
 });
