@@ -6,3 +6,6 @@
 ![Screenshot](https://github.com/FrederikHeinrich/Interactive-Twitch-Chat/raw/main/screenshots/screen1.png)
 ![Screenshot](https://github.com/FrederikHeinrich/Interactive-Twitch-Chat/raw/main/screenshots/screen2.png)
 ![Screenshot](https://github.com/FrederikHeinrich/Interactive-Twitch-Chat/raw/main/screenshots/screen3.png)
+
+## Download
+https://github.com/FrederikHeinrich/LostArkMapAsOverlay/releases/latest
