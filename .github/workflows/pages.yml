@@ -12,19 +12,19 @@ jobs:
       node-version: [12.x]
       
     steps:
-    - name: Checkout 🛎️ 
-      uses: actions/checkout@v2
+      - name: Checkout 🛎️ 
+        uses: actions/checkout@v2
 
-    - name: Install and Build 🔧
-      uses: actions/setup-node@v1
-      with:
-        node-version: {{ matrix.node-version }}
-    - run: npm i
-    - run: npm run build
+      - name: Install and Build 🔧
+        uses: actions/setup-node@v1
+        with:
+          node-version: {{ matrix.node-version }}
+      - run: npm i
+      - run: npm run build
 
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: www
-        FOLDER: dist
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: www
+          FOLDER: dist
