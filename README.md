@@ -1,1 +1,3 @@
 # Interactive-Twitch-Chat
+[![Release](https://github.com/FrederikHeinrich/Interactive-Twitch-Chat/actions/workflows/release.yml/badge.svg)](https://github.com/FrederikHeinrich/Interactive-Twitch-Chat/actions/workflows/release.yml)
+[![Build](https://github.com/FrederikHeinrich/Interactive-Twitch-Chat/actions/workflows/build.yml/badge.svg)](https://github.com/FrederikHeinrich/Interactive-Twitch-Chat/actions/workflows/build.yml)
