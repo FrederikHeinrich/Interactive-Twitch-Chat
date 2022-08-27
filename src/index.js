@@ -40,7 +40,7 @@ const {
     });
 
     mainWindow.setAlwaysOnTop(true, 'screen');
-    mainWindow.loadURL("http://localhost:3000/");
+    mainWindow.loadURL("https://interactive-twitch-chat.frederikheinrich.de/");
     mainWindow.on("ready-to-show", () => {
       mainWindow.show();
     });
