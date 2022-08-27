@@ -1,6 +1,5 @@
-
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -23,10 +22,6 @@
 
 $white: rgba(255,255,255,0.3);
 
-body {
-  background: linear-gradient(45deg, #FC466B, #3F5EFB);
-  font-family: 'Montserrat', sans-serif;
-}
 
 #prompt {
     position: absolute;
