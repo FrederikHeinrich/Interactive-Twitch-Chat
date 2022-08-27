@@ -16,14 +16,18 @@
   "license": "ISC",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "src/icon.ico"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "interactive-twitch-chat",
-            "loadingGif": "src/loading.gif",
-            "setupIcon": "src/icon.ico"
+            "setupIcon": "src/icon.ico",
+            "appIcon": "src/icon.ico",
+            "icon": "src/icon.ico"
+            
           }
         },
         {
