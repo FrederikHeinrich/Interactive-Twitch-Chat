@@ -34,8 +34,45 @@ client.on("messagedeleted", (channel, username, deletedMessage, userstate) => {
   document.getElementById(`message=${userstate['target-msg-id']}`).remove();
 });
 
+function getMessageHTML(message, { emotes }) {
+  if (!emotes) return message;
+
+  // store all emote keywords
+  // ! you have to first scan through 
+  // the message string and replace later
+  const stringReplacements = [];
+
+  // iterate of emotes to access ids and positions
+  Object.entries(emotes).forEach(([id, positions]) => {
+    // use only the first position to find out the emote key word
+    const position = positions[0];
+    const [start, end] = position.split("-");
+    const stringToReplace = message.substring(
+      parseInt(start, 10),
+      parseInt(end, 10) + 1
+    );
+
+    stringReplacements.push({
+      stringToReplace: stringToReplace,
+      replacement: `<img src='https://static-cdn.jtvnw.net/emoticons/v2/${id}/animated/dark/1.0' onerror="this.src=src='https://static-cdn.jtvnw.net/emoticons/v1/${id}/1.0'">`,
+    });
+  });
+
+  // generate HTML and replace all emote keywords with image elements
+  const messageHTML = stringReplacements.reduce(
+    (acc, { stringToReplace, replacement }) => {
+      // obs browser doesn't seam to know about replaceAll
+      return acc.split(stringToReplace).join(replacement);
+    },
+    message
+  );
+
+  return messageHTML;
+}
+
 client.on('message', (channel, tags, message, self) => {
   console.log(tags)
+  console.log(`Message img ${getMessageHTML(message, tags)}`)
   console.log(`${tags['display-name']}: ${message}`);
   
   var messageBlock = document.createElement('div');
@@ -107,7 +144,7 @@ client.on('message', (channel, tags, message, self) => {
   windowBody.classList.add('window-body');
 
   var messageText = document.createElement('p');
-  messageText.innerHTML = ` ${message} `
+  messageText.innerHTML = ` ${getMessageHTML(message, tags)} `
   windowBody.appendChild(messageText);
 
   messageBlock.appendChild(titleBar);
