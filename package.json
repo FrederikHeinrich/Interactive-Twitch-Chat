@@ -1,7 +1,7 @@
 {
   "name": "interactive-twitch-chat",
   "version": "1.0.0",
-  "description": "",
+  "description": "Freddi´s Interactive Twitch Chat",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -21,7 +21,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "overlay"
+            "name": "TCI"
           }
         },
         {
