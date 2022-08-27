@@ -1,0 +1,87 @@
+{
+  "name": "streamer-chat-integration-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "publish": null,
+  "keywords": [],
+  "author": "Freddi <mail@FrederikHeinrich.de>",
+  "license": "ISC",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "overlay"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "frederikheinrich",
+              "name": "streamer-chat-integration-app"
+            },
+            "draft": true
+          }
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-is-dev": "^2.0.0",
+    "electron-log": "^4.4.6",
+    "electron-squirrel-startup": "^1.0.0",
+    "update-electron-app": "^2.0.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "@electron-forge/publisher-github": "^6.0.0-beta.63",
+    "electron": "17.1.0"
+  },
+  "build": {
+    "extraResources": [
+      "./public/**"
+    ],
+    "fileAssociations": {
+      "icon": "mokokostatue.ico"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrederikHeinrich/streamer-chat-integration-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FrederikHeinrich/streamer-chat-integration-app/issues"
+  },
+  "homepage": "https://github.com/FrederikHeinrich/streamer-chat-integration-app#readme"
+}
