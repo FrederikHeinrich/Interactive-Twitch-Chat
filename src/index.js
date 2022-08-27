@@ -18,7 +18,7 @@ const {
   }
   
   require('update-electron-app')({
-    repo: 'frederikheinrich/streamer-chat-integration-app',
+    repo: 'frederikheinrich/Interactive-Twitch-Chat',
     updateInterval: '5 minutes',
     logger: require('electron-log')
   })
@@ -64,7 +64,7 @@ const {
       createWindow();
     }
   });
-  
+  /*
   autoUpdater.on("update-available", (_event, releseNotes, releseName) => {
     const dialogOpts = {
       type: "info",
@@ -90,4 +90,4 @@ const {
     dialog.showMessageBox(dialogOpts).then((returnValue) => {
       if (returnValue.response === 0) autoUpdater.quitAndInstall()
     })
-  })
+  })*/
