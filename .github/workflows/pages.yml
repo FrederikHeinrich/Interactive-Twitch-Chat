@@ -3,9 +3,6 @@ name: Deploy-Page
 on:
   push:
     branches: [websurce]
-  release:
-    types:
-      - released
 
 jobs:
   deploy:
