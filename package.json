@@ -1,5 +1,5 @@
 {
-  "name": "streamer-chat-integration-app",
+  "name": "interactive-twitch-chat",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
@@ -45,7 +45,7 @@
           "config": {
             "repository": {
               "owner": "frederikheinrich",
-              "name": "streamer-chat-integration-app"
+              "name": "Interactive-Twitch-Chat"
             },
             "draft": true
           }
@@ -78,10 +78,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FrederikHeinrich/streamer-chat-integration-app.git"
+    "url": "git+https://github.com/FrederikHeinrich/Interactive-Twitch-Chat.git"
   },
   "bugs": {
-    "url": "https://github.com/FrederikHeinrich/streamer-chat-integration-app/issues"
+    "url": "https://github.com/FrederikHeinrich/Interactive-Twitch-Chat/issues"
   },
-  "homepage": "https://github.com/FrederikHeinrich/streamer-chat-integration-app#readme"
+  "homepage": "https://github.com/FrederikHeinrich/Interactive-Twitch-Chat#readme"
 }
