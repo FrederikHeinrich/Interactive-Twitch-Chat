@@ -17,16 +17,14 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "src/icon.ico"
+        "icon": "./src/icon.ico"
       },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "interactive-twitch-chat",
-            "setupIcon": "src/icon.ico",
-            "appIcon": "src/icon.ico",
-            "icon": "src/icon.ico"
+            "setupIcon": "src/icon.ico"
             
           }
         },
