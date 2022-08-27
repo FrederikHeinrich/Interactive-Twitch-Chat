@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive-Twitch-Chat</title>
+  <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="module" crossorigin src="/assets/index.cc9b365c.js"></script>
+  <link rel="stylesheet" href="/assets/index.3f86c8af.css">
+</head>
+
+<body>
+  <div id="prompt">
+    <form method="get">
+      <p>Welcome</p>
+      <input type="text" placeholder="Channel" name="stream" id="stream"><br>
+      <!--<input type="password" placeholder="Password"><br>-->
+      <input type="submit" value="Start"><br>
+      <!--<a href="#">Forgot Password?</a>-->
+    </form>
+  
+    <div class="drops">
+      <div class="drop drop-1"></div>
+      <div class="drop drop-2"></div>
+      <div class="drop drop-3"></div>
+      <div class="drop drop-4"></div>
+      <div class="drop drop-5"></div>
+    </div>
+  </div>
+  <div id="app"></div>
+  <script src="/tmi.min.js"> </script>
+  
+</body>
+
+</html>
