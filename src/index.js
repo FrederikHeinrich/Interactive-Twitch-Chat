@@ -8,7 +8,7 @@ const {
   const path = require('path');
   const fs = require('fs');
   const isDev = require("electron-is-dev")
-  
+
   app.disableHardwareAcceleration();
   
   // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -24,7 +24,7 @@ const {
   })
   
   const server = 'https://update.electronjs.org'
-  const feed = `${server}/frederikheinrich/streamer-chat-integration-app/${process.platform}-${process.arch}/${app.getVersion()}`
+  const feed = `${server}/frederikheinrich/Interactive-Twitch-Chat/${process.platform}-${process.arch}/${app.getVersion()}`
   
   autoUpdater.setFeedURL(feed)
   
@@ -36,7 +36,7 @@ const {
         transparent: true,
         alwaysOnTop: true,
         vibrancy: 'ultra-dark',
-        icon: path.join(__dirname, 'mokokostatue.ico')
+        icon: path.join(__dirname, 'icon.ico')
     });
 
     mainWindow.setAlwaysOnTop(true, 'screen');

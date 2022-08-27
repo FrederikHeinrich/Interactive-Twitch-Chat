@@ -1,6 +1,6 @@
 {
   "name": "interactive-twitch-chat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Freddi´s Interactive Twitch Chat",
   "main": "src/index.js",
   "scripts": {
@@ -73,7 +73,7 @@
       "./public/**"
     ],
     "fileAssociations": {
-      "icon": "mokokostatue.ico"
+      "icon": "icon.ico"
     }
   },
   "repository": {
