@@ -21,7 +21,9 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "TCI"
+            "name": "interactive-twitch-chat",
+            "loadingGif": "src/loading.gif",
+            "setupIcon": "src/icon.ico"
           }
         },
         {
@@ -73,7 +75,7 @@
       "./public/**"
     ],
     "fileAssociations": {
-      "icon": "icon.ico"
+      "icon": "src/icon.ico"
     }
   },
   "repository": {
