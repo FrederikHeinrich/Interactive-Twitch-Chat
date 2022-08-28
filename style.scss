@@ -1,5 +1,5 @@
 #app {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -24,6 +24,7 @@ $white: rgba(255,255,255,0.3);
 
 
 #prompt {
+    font-family: 'Montserrat', sans-serif;
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
